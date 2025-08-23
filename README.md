@@ -16,6 +16,11 @@ A Streamlit app to analyze PhonePe data with interactive visualizations. This pr
 - Bar plots and line charts for trends
 - Easy to run locally with Streamlit
 
+  ## 🛠️ Tech Stack
+- **Python** (pandas, matplotlib, streamlit, mysql-connector)
+- **MySQL** (for storing & querying transaction data)
+- **Streamlit** (for interactive dashboard)
+
 ## Data Extraction
 This data has been structured to provide details of following three sections with data cuts on Transactions, Users and Insurance of PhonePe Pulse - Explore tab.
 
