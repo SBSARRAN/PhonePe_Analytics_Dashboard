@@ -16,4 +16,37 @@ A Streamlit app to analyze PhonePe data with interactive visualizations. This pr
 - Bar plots and line charts for trends
 - Easy to run locally with Streamlit
 
+## Data Extraction
+This data has been structured to provide details of following three sections with data cuts on Transactions, Users and Insurance of PhonePe Pulse - Explore tab.
+
+1) Aggregated - Aggregated values of various payment categories as shown under Categories section
+2) Map - Total values at the State and District levels.
+3) Top - Totals of top States / Districts /Pin Codes
+All the data provided in these folders is of JSON format.
+Syntax :
+data
+|___ aggregated
+    |___ transactions
+        |___ country
+            |___ india
+                |___ 2018
+                |    1.json
+                |    2.json
+                |    3.json
+                |    4.json
+
+                |___ 2019
+                |    ...
+                |___ 2019
+                |___ state
+                    |___ andaman-&-nicobar-islands
+                        |___2018
+                        |   1.json
+                        |   2.json
+                        |   3.json
+                        |   4.json
+
+                    |___ andhra-pradesh
+                    |    ...
+                    |    ...
 
