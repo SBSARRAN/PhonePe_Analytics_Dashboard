@@ -116,7 +116,7 @@ elif selected_Case_study == 'User Registration Analysis':
     selected_year = st.selectbox ("Select Year",years,key = "years_Filtered")
     mycursor.execute("select distinct quater from top_users group by quater")
     quaters = [i[0] for i in mycursor.fetchall()]
-    selected_quater = st.selectbox("Select Year",quaters,key = "Quaters_Filtered")
+    selected_quater = st.selectbox("Select Quater",quaters,key = "Quaters_Filtered")
     mycursor.execute("""
         SELECT State, SUM(Top_registered_Users) AS Total_Register_users
         FROM top_users 
@@ -160,7 +160,7 @@ elif selected_Case_study == 'Insurance Engagement Analysis':
     selected_year = st.selectbox ("Select Year",years,key = "years_Filtered")
     mycursor.execute("select distinct quater from top_insurance group by quater")
     quaters = [i[0] for i in mycursor.fetchall()]
-    selected_quater = st.selectbox("Select Year",quaters,key = "Quaters_Filtered")
+    selected_quater = st.selectbox("Select Quater",quaters,key = "Quaters_Filtered")
     mycursor.execute("select state,sum(Top_Insurance_Amount) as Total_insurance_Amount from top_insurance group by state order by Total_insurance_Amount DESC limit 10;")
     State_Data = mycursor.fetchall()
     df_state = pd.DataFrame(State_Data,columns = ['State','Total_insurance_Amount'])
@@ -184,4 +184,5 @@ elif selected_Case_study == 'Insurance Engagement Analysis':
     ax2.set_ylabel("District")
     ax1.set_title(f"Top 10 States by Registered Users ({selected_year} Q{selected_quater})")
     st.pyplot(fig2)
+
 
